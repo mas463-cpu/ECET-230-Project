@@ -1,3 +1,7 @@
+## Block Diagram
+
+![Air Mouse Block Diagram](AIR%20MOUSE%20PROJECT%20230.drawio.png)
+
 ## Hardware Used
 
 - **Arduino Leonardo**  
