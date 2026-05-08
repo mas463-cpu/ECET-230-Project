@@ -9,3 +9,12 @@ This project is an Arduino-based air mouse that allows a user to control a compu
 - USB connection to PC
 
 The Arduino reads gyroscope data, processes it, and sends mouse commands to the computer.
+
+## Development Process
+
+- Created schematic in KiCad
+- Designed PCB layout and routed traces
+- Added MPU6050 motion sensor support
+- Implemented USB HID communication
+- Added ground plane and multi-layer routing
+- Tested routing and component placement
