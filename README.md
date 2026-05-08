@@ -18,3 +18,11 @@ The Arduino reads gyroscope data, processes it, and sends mouse commands to the 
 - Implemented USB HID communication
 - Added ground plane and multi-layer routing
 - Tested routing and component placement
+
+## Future Improvements
+
+- Improve cursor smoothing and motion filtering
+- Add rechargeable battery support
+- Reduce PCB size for a more compact handheld design
+- Add wireless Bluetooth functionality
+- Improve button placement and ergonomics
