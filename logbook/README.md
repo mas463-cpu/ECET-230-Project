@@ -37,4 +37,61 @@ The goal of this project is to design an air mouse that allows a user to control
 
 ## Notes
 - Cursor drift may require calibration
-- Sensitivity tuning will be needed for smooth movement
+- Sensitivity tuning will be needed for smooth movement\
+
+# Firmware Development
+
+- Implemented USB HID mouse communication using the ATmega32U4
+- Read MPU6050 gyroscope data over I2C communication
+- Added startup gyro calibration using averaged still samples
+- Implemented adaptive bias correction to reduce long-term cursor drift
+- Added deadzone filtering to suppress small unwanted movements
+- Added motion smoothing to improve cursor stability
+- Implemented left click, right click, and recalibration button handling
+- Tuned cursor scaling values for more natural movement
+
+# Challenges and Fixes
+
+## Cursor Drift
+- Raw gyroscope values slowly drifted over time even while the device was stationary
+- Added startup calibration and adaptive bias correction while device is still
+
+## Cursor Jitter
+- Small sensor fluctuations caused unstable cursor movement
+- Added deadzone filtering and exponential smoothing
+
+## Button Handling
+- Rapid polling caused unstable click behavior
+- Implemented edge-detection logic for cleaner button presses
+
+## I2C Communication Stability
+- Sensor communication occasionally became unstable
+- Added pull-up resistors and improved I2C timing configuration
+
+# Lessons Learned
+
+- Raw IMU data requires significant filtering before it becomes usable
+- Firmware processing became more important than expected
+- PCB layout and enclosure planning strongly affect each other
+- Simplifying the project scope improved development progress
+- Wired USB greatly reduced communication complexity
+- Motion smoothing and calibration significantly improved usability
+
+# Final Project Status
+
+## Completed
+- KiCad schematic
+- PCB layout
+- USB HID firmware
+- MPU6050 integration
+- Three-button interface
+- 3D PCB render
+- Enclosure concept
+- BOM generation
+- Gerber generation
+
+## Remaining Work
+- Physical PCB fabrication
+- Final enclosure mounting
+- Ergonomic testing
+- Sensitivity refinement
